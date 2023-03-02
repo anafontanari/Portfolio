@@ -1,0 +1,391 @@
+/* ===========================================================
+    Estilos padrões para todo o Portifólio
+*/
+
+/** "Zera" os elementos inicialmente */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style-type: none;
+}
+
+/** Centralizar horizontalmente */
+.center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/** Estilo padrão para os títulos de sessão do portifólio */
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+.sub {
+    padding-top: 30px;
+    background-color: transparent;
+    color: black;
+}
+
+/** Estilo dos títulos de sessão, preenchendo toda a linha
+    ou metade dela */
+.half {
+    width: 50%;
+}
+.full {
+    width: 100%;
+}
+
+/** Estilo padrão para os textos de conteúdo do portifólio */
+.text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    text-align: justify;
+    letter-spacing: 2px;
+}
+
+/* ===========================================================
+    ESTRUTURA GERAL DO PORTIFÓLIO
+
+    - ESQUERDA: Conteúdo de Identificação
+            (Foto, Nome, Sobre, Contatos, etc.)
+    - DIREITA: Conteúdo de Conhecimentos
+            (Experiências, Formação, Habilidades, etc.)
+*/
+.portfolio {
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+}
+.left {
+    background-color:#5ad39b;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right {
+    background-color:#e9eceb;
+    width: 70%;
+}
+
+/* =========================================================
+    ESTRUTURA DA ESQUERDA DO PORTIFÓLIO
+    
+    Estilos para os seguintes elementos:
+    - Foto
+    - Nome
+    - Sobre
+    - Informações e Contatos
+    - Hobbies
+*/
+
+/** Foto do portifólio: já incorpora a imagem como background
+    da DIV e aplica borda e sombreado como efeito estético de
+    enquadramento */
+.photo {
+    width: 65%;
+    height: 350px;
+    margin-top: 50px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position-x: center;
+    background-position-y: center;
+    background: transparent url(..\\assets\\images\\Ana.png);
+    border: 10px solid #e9eceb;
+    -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+    -moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.77);
+    box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.77);
+}
+
+/** Estilo para o nome do portifólio */
+.name {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px;
+}
+
+/** Estilo para o conteúdo sobre a pessoa */
+.about {
+    width: 90%;
+    font-size: 18px;
+    padding-bottom: 20px;
+    line-height: 24px;
+}
+
+/** Estilo para o ícone de informações
+    (Contatos e Hobbies) */
+.icon {
+    width: 20%;
+    text-align: center;
+}
+.icon img {
+    max-width: 25px;
+    max-height: 25px;
+    margin: 10px;
+}
+.large img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+/** Estilo para o texto de informações
+    (Contatos e Hobbies) */
+.info {
+    width: 80%;
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.info a {
+    text-decoration: none;
+}
+
+/* =========================================================
+    ESTRUTURA DA DIREITA DO PORTIFÓLIO
+    
+    Estilos para os seguintes elementos:
+    - Formação
+    - Experiências
+    - Habilidades
+    - Idiomas
+*/
+
+/** Complemento de estilo para os títulos de sessão
+    da estrutura direita do portifólio */
+.title-right {
+    text-indent: 50px;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/** Organiza em duas colunas na estrutura da direita */
+.organize-two-section {
+    display: flex;
+    flex-direction: row;
+}
+
+/** Separação do intervalo entre as duas colunas */
+.two-section {
+    padding-right: 30px;
+}
+
+/** Estilo para apresentação do info nos títulos de sessão */
+.tooltip {
+    width: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.tooltip div {
+    margin: 2px;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    background-color: #5ad39b;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+}
+
+/* =========================================================
+    Estilo para compor a timeline para as experiências e
+    formações. Contém os bullets, linhas e ícones quem
+    compõem a timeline.
+*/
+
+/** Estilo para posicionar a timeline à esquerda dos textos */
+.timeline {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/** Borda padrão da timeline */
+.timeline-border {
+    border-style: solid;
+    border-color: #5ad39b;
+}
+
+/** Estilo para as datas da timeline */
+.bullet {
+    border-width: 3px;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8px;
+    color: darkslategrey;
+    text-align: center;
+}
+
+/** Estilo para as linhas da timeline */
+.line {
+    border-width: 1px;
+    height: 10px;
+    width: 0px;
+}
+.small {
+    height: 5px;
+}
+.big {
+    height: 40px;
+}
+.biggest {
+    height: 80px;
+}
+
+/** Estilo para as linhas tracejadas da timeline */
+.dashed {
+    border-style: dashed;
+}
+
+/** Estilo para os ícones da timeline */
+.timeline-icon {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+/* ===========================================================
+    Estilo para efeito quando o mouse passar sobre o icone
+    da timeline, aumentando levemente o ícone de tamanho e
+    fazendo aparecer o texto de duração
+*/
+.hover {
+	position: relative;
+    float: left;
+}
+
+/** Configuração inicial do texto de duração que irá 
+    aparecer ao lado do ícone da timeline */
+.hover span {
+    width: 50px;
+	position: absolute;
+	left: 30px;
+	color: darkslategrey;
+	font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+	text-align: left;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+}
+
+/** Faz aparecer o texto de duração ao lado do ícone */
+.hover figure:hover + span {
+	left: 40px;
+	opacity: 1;
+}
+.two-lines {
+    bottom: 5px;
+}
+.one-line {
+    bottom: 10px;
+}
+
+/** Configuração inicial para o efeito hover,
+    quando passar o mouse sobre o ícone */
+.hover figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    margin-top: -2px;
+    margin-bottom: -6px;
+}
+
+/** Aumenta levemente a imagem quando passar
+    o mouse por cima do ícone */
+.hover figure:hover img { 
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+/* ===========================================================
+    Conteúdo das extruturas de texto da direita do portifólio
+*/
+.occurence {  
+    width: 80%;
+}
+.occurence h4 {  /* Título do conteúdo */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.occurence p {   /* Descrição do conteúdo */ 
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+    padding-right: 50px;
+}
+.align {
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+
+/** Estilo para o logo de formação */
+.logo {
+    max-width: auto;
+    max-height: 70px;
+    margin-right: 30px;
+}
+
+/* ===========================================================
+    Conteúdo para os conhecimentos específicas como
+    Habilidades e Idiomas
+*/
+.hability {
+    padding-left: 40px;
+    width: 75%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.hability div span {
+    font-size: 10px;
+    font-weight: bold;
+    left: 340px;
+}
+.hability div figure:hover + span {
+    left: 350px;
+}
+
+/* ===========================================================
+    Barra de grau de conhecimento para os conhecimentos
+    específicos, onde o % é ajustado direto no HTML
+*/
+.bar {
+    padding: 0;
+    margin-top: 5px;
+    border: 2px;
+    border-style: solid;
+    height: 10px;
+    border-color: silver;
+    background-color: silver;
+}
+.bar div {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 10px;
+    background-color: #5ad39b;
+}
+
+
+
